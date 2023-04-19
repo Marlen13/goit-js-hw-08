@@ -29,3 +29,19 @@ const gallery = document.querySelector('.gallery');
 })();
 
 console.log('galleryItems');
+
+gallery.addEventListener('click', onClick);
+function onClick(evt) {
+  evt.preventDefault();
+  const imgGalleryItem = evt.target.classList.contains('gallery-image');
+  if (!imgGalleryItem) {
+    return;
+  }
+  // const instance = basicLightbox.create(`
+  //     <img
+  //     src="${evt.target.dataset.source}"
+  //     width = "600px"
+  //     />
+  //    `);
+  // instance.show();
+}
