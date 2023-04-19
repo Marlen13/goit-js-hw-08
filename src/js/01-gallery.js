@@ -30,9 +30,8 @@ const gallery = document.querySelector('.gallery');
 
 console.log('galleryItems');
 
-new SimpleLightbox('.gallery .gallery__link', {
+new SimpleLightbox('.gallery a', {
   /* options */
-  captionSelector: 'img',
   captionType: 'attr',
   captionsData: 'alt',
   captionDelay: 250,
