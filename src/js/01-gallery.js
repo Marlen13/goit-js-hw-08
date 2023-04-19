@@ -1,12 +1,13 @@
 //import library
 import SimpleLightbox from 'simplelightbox';
-
-// Add imports above this line
 //import own code
 import { galleryItems } from './gallery-items';
 //import styles
 import 'simplelightbox/dist/simple-lightbox.min.css';
+
+// Add imports above this line
 // Change code below this line
+console.log('galleryItems');
 
 const gallery = document.querySelector('.gallery');
 (function () {
@@ -28,9 +29,7 @@ const gallery = document.querySelector('.gallery');
   gallery.insertAdjacentHTML('beforeend', markup);
 })();
 
-console.log('galleryItems');
-
-new SimpleLightbox('.gallery a', {
+let lightbox = new SimpleLightbox('.gallery a', {
   /* options */
   captionType: 'attr',
   captionsData: 'alt',
