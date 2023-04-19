@@ -37,11 +37,11 @@ function onClick(evt) {
   if (!imgGalleryItem) {
     return;
   }
-  // const instance = basicLightbox.create(`
-  //     <img
-  //     src="${evt.target.dataset.source}"
-  //     width = "600px"
-  //     />
-  //    `);
-  // instance.show();
+  new SimpleLightbox('.gallery__image .gallery__link', {
+    /* options */
+    captionSelector: 'img',
+    captionType: 'attr',
+    captionsData: 'alt',
+    captionDelay: 250,
+  });
 }
