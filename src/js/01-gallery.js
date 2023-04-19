@@ -30,18 +30,10 @@ const gallery = document.querySelector('.gallery');
 
 console.log('galleryItems');
 
-gallery.addEventListener('click', onClick);
-function onClick(evt) {
-  evt.preventDefault();
-  const imgGalleryItem = evt.target.classList.contains('gallery-image');
-  if (!imgGalleryItem) {
-    return;
-  }
-  new SimpleLightbox('.gallery__image .gallery__link', {
-    /* options */
-    captionSelector: 'img',
-    captionType: 'attr',
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
-}
+new SimpleLightbox('. gallery .gallery__link', {
+  /* options */
+  captionSelector: 'img',
+  captionType: 'attr',
+  captionsData: 'alt',
+  captionDelay: 250,
+});
