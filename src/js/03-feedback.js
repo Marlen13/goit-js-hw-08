@@ -36,4 +36,5 @@ function onSubmit(evt) {
   evt.preventDefault();
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
+  btn.disabled = true;
 }
