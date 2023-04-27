@@ -31,7 +31,7 @@ function onSubmit(evt) {
   evt.preventDefault();
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
-  arrForm = {};
+  // const arrForm = {};
   // btn.disabled = true;
 }
 
