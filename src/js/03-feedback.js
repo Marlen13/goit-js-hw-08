@@ -4,7 +4,6 @@ const form = document.querySelector('.feedback-form');
 const input = document.querySelector('[name = "email"]');
 const textarea = document.querySelector('[name = "message"]');
 const btn = document.querySelector('button');
-btn.setAttribute('disabled', 'disabled');
 const STORAGE_KEY = 'feedback-form-state';
 const arrForm = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 //check localStorage
@@ -20,7 +19,7 @@ function onInput(evt) {
   arrForm[evt.target.name] = evt.target.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(arrForm));
 
-  if (!evt.target.value) {
+  if (!input.value || !textarea.value) {
     btn.disabled = true;
   } else {
     btn.disabled = false;
