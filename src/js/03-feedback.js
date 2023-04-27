@@ -32,7 +32,7 @@ function onSubmit(evt) {
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
   arrForm = {};
-  btn.disabled = true;
+  // btn.disabled = true;
 }
 
 // checkLocal(arrForm);
